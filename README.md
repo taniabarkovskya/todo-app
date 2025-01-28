@@ -1,50 +1,30 @@
-# React Todo App with API (complete)
+# React Todo App with API
+## Project Overview
+This project is a React-based Todo application integrated with an API, designed to manage todos efficiently. Users can load todos on page load, add new todos, delete them, toggle their completion status, and rename them. The app communicates with a backend API to perform actions like adding, deleting, and updating todos, ensuring data persistence and smooth user interaction. It also includes error handling and notifications to improve the user experience during API interactions.
 
-It is the third part of the React Todo App with API.
+## Demo
+You can see the live version of the app here: [Demo Link](https://taniabarkovskya.github.io/todo-app/)
 
-Take your code implemented for [Add and Delete](https://github.com/mate-academy/react_todo-app-add-and-delete)
-and implement the ability to toggle and rename todos.
+## Technologies
+- React
+- TypeScript
+- API integration (Fetch)
+- SCSS for styling
 
-> Here is [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
+## Features Implemented
+#### Todo Management:
+Users can view all todos, add new ones, and delete existing ones with real-time updates.
+#### Status Toggling:
+Allows users to toggle the completion status of individual todos and even update the status of all todos at once.
+#### Rename Todo:
+Enables users to edit todo titles directly within the app, with changes saved via API.
+#### Error Handling:
+Displays error notifications in case of issues with adding, deleting, or updating todos.
+#### Smooth User Experience:
+Uses loaders while fetching or sending data to the API, and optimizes the UI by disabling elements while actions are in progress.
 
-## Toggling a todo status
-
-Toggle the `completed` status on `TodoStatus` change:
-- Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
-- covered the todo with a loader overlay while waiting for API response;
-- the status should be changed on success;
-- show the `Unable to update a todo` notification in case of API error.
-
-Add the ability to toggle the completed status of all the todos with the `toggleAll` checkbox:
-
-- `toggleAll` button should have `active` class only if all the todos are completed;
-- `toggleAll` click changes its status to the opposite one, and sets this new status to all the todos;
-- it should work the same as several individual updates of the todos which statuses were actually changed;
-- do send requests for the todos that were not changed;
-
-## Renaming a todo
-
-Implement the ability to edit a todo title on double click:
-
-- show the edit form instead of the title and remove button;
-- saves changes on the form submit (just press `Enter`);
-- save changes when the field loses focus (`onBlur`);
-- if the new title is the same as the old one just cancel editing;
-- cancel editing on `Esс` key `keyup` event;
-- if the new title is empty delete the todo the same way the `x` button does it;
-- if the title was changed show the loader while waiting for the API response;
-- update the todo title on success;
-- show `Unable to update a todo` in case of API error;
-- or the deletion error message if we tried to delete the todo.
-
-## If you want to enable tests
-- open `cypress/integration/page.spec.js`
-- replace `describe.skip` with `describe` for the root `describe`
-
-> ❗❗All tests should pass, even if some behaviour in not well explained in the task❗❗
-
-## Instructions
-
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://taniabarkovskya.github.io/react_todo-app-with-api/) and add it to the PR description.
+## Getting Started
+- Clone the repository.
+- Install dependencies with npm install.
+- Run the app using npm start.
+- Visit http://localhost:5173 in your browser.
